@@ -1,0 +1,30 @@
+name: Check PR Description
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  check-description:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR description
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const description = pr.body || '';
+            const checkboxes = description.match(/- \[x\]/g) || [];
+            const totalCheckboxes = (description.match(/- \[/g) || []).length;
+
+            if (totalCheckboxes === 0) {
+              console.log('No checkboxes found in the PR description.');
+              return;
+            }
+
+            if (checkboxes.length !== totalCheckboxes) {
+              throw new Error(`Not all checkboxes are checked. Checked: ${checkboxes.length}, Total: ${totalCheckboxes}`);
+            }
+
+            console.log('All checkboxes are checked.');
