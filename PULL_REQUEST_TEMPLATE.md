@@ -19,7 +19,7 @@
  - [ ] （バックエンド）統合テストを実装した。 / テストを書けない場合は、その理由をここに記述。
  - [ ] （バックエンド）Migrationが必要な場合、先にMigrationファイルのみのPRをマージし、本番環境でMigrationを行った。 / Migrationは行わない。
  - [ ] （バックエンド）本番環境上で環境変数の追加が必要な場合、先に環境変数のデプロイを行った。 / 環境変数は追加しない。
- - [ ] （インフラ）環境変数の追加が必要な場合、パラメータストアに環境変数を追加した
+ - [ ] （インフラ）環境変数の追加が必要な場合、beta環境とprod環境のパラメータストアに環境変数を追加した
    - [ ] beta環境（betaアカウントにサインインした状態で [パラメータストア](https://ap-northeast-1.console.aws.amazon.com/systems-manager/parameters?region=ap-northeast-1) にアクセス）
    - [ ] prod環境（prodアカウントにサインインした状態で [パラメータストア](https://ap-northeast-1.console.aws.amazon.com/systems-manager/parameters?region=ap-northeast-1) にアクセス）
 
