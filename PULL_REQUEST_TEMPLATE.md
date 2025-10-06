@@ -20,7 +20,7 @@
  - [ ] （バックエンド）単体テストを実装した。 / テストを書けない場合は、その理由をここに記述。
  - [ ] （バックエンド）統合テストを実装した。 / テストを書けない場合は、その理由をここに記述。
  - [ ] （バックエンド）Migrationが必要な場合以下を確認。 / Migrationは行わない。
-       ① `infra/composer.json`の`version`を更新し、`task update-infra`を実行した(詳細はBEのReadmeを参照)
+       ① infra/composer.jsonのversionを更新し、task update-infraを実行した(詳細はBEのReadmeを参照)
        ② ローカルでmigrationを実行し、DBが適切に作られること。
        ③ MigrationファイルのみのPRをマージし、本番環境でMigrationを行った。
  - [ ] （バックエンド）本番環境上で環境変数の追加が必要な場合、先に環境変数のデプロイを行った。 / 環境変数は追加しない。
